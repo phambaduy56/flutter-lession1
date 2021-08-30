@@ -7,6 +7,7 @@ import 'package:lession_01/views/SingIn/Number_page.dart';
 import 'package:lession_01/views/SingIn/SingIn.dart';
 import 'package:lession_01/views/SingIn/Verification_page.dart';
 import 'package:lession_01/views/SingIn/location_page.dart';
+import 'package:lession_01/views/navbar/nav.dart';
 import 'package:lession_01/views/onbording_page.dart';
 import 'package:lession_01/views/splash_page.dart';
 
@@ -28,6 +29,7 @@ void main() {
       '/LocationPage': (context) => LocationPage(),
       '/LoginPage': (context) => LoginPage(),
       '/SingupPage': (context) => SingupPage(),
+      '/NavPage': (context) => nav(),
     },
   ));
 }

@@ -164,6 +164,6 @@ class SubmitButton extends StatelessWidget {
   }
 
   void onChangeLogin(BuildContext context) {
-    Navigator.pushNamed(context, '/LoginPage');
+    Navigator.pushNamed(context, '/NavPage');
   }
 }
