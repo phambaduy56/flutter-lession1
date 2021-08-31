@@ -63,7 +63,6 @@ class _SingInState extends State<SingIn> {
                     SizedBox(width: 35.9),
                     Icon(FontAwesomeIcons.google,
                         color: Colors.white, size: 24.06),
-                    //Image.asset('assets/images/Rectangle11.png'),
                     SizedBox(width: 40),
                     Text(
                       "Continue with Google",
