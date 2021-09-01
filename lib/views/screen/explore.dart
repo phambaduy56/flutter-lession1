@@ -69,34 +69,42 @@ class _ExploreState extends State<Explore> {
                   ItemGritview(
                     imgage: 'assets/images/pngfuel11.png',
                     name: 'Frash Fruits & Vegetable',
+                    hexColor: '0x1A53B175',
                   ),
                   ItemGritview(
                     imgage: 'assets/images/pngfuel12.png',
                     name: 'Cooking Oil & Ghee',
+                    hexColor: '0x1AF8A44C',
                   ),
                   ItemGritview(
                     imgage: 'assets/images/pngfuel13.png',
                     name: 'Meat & Fish',
+                    hexColor: '0x40F7A593',
                   ),
                   ItemGritview(
                     imgage: 'assets/images/pngfuel14.png',
                     name: 'Bakery & Snacks',
+                    hexColor: '0x40F7A593',
                   ),
                   ItemGritview(
                     imgage: 'assets/images/pngfuel14.png',
                     name: 'Dairy & Eggs',
+                    hexColor: '0x40D3B0E0',
                   ),
                   ItemGritview(
                     imgage: 'assets/images/pngfuel14.png',
                     name: 'Beverages',
+                    hexColor: '0x40FDE598',
                   ),
                   ItemGritview(
                     imgage: 'assets/images/pngfuel14.png',
                     name: 'Beverages',
+                    hexColor: '0x40FDE598',
                   ),
                   ItemGritview(
                     imgage: 'assets/images/pngfuel14.png',
                     name: 'Beverages',
+                    hexColor: '0x40FDE598',
                   ),
                 ],
               ),
@@ -113,46 +121,52 @@ class ItemGritview extends StatelessWidget {
     Key? key,
     required this.imgage,
     required this.name,
+    required this.hexColor,
   }) : super(key: key);
 
-  final String imgage, name;
+  final String imgage, name, hexColor;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(15),
-        border: Border.all(width: 1, color: Color(0xffE2E2E2)),
-        color: Color(0x1A53B175),
-      ),
-      child: Stack(
-        alignment: Alignment.center,
-        children: [
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Padding(
-                padding: EdgeInsets.only(left: 16, right: 15),
-                child: Image.asset(
-                  imgage,
-                  width: 111,
-                  height: 74,
-                ),
-              ),
-              Flexible(
-                child: Text(
-                  name,
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
+    return GestureDetector(
+      onTap: () {
+        print("hello");
+      },
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(15),
+          border: Border.all(width: 1, color: Color(0xffE2E2E2)),
+          color: Color(int.parse('$hexColor')),
+        ),
+        child: Stack(
+          alignment: Alignment.center,
+          children: [
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: EdgeInsets.only(left: 16, right: 15),
+                  child: Image.asset(
+                    imgage,
+                    width: 111,
+                    height: 74,
                   ),
-                  overflow: TextOverflow.clip,
                 ),
-              )
-            ],
-          ),
-        ],
+                Flexible(
+                  child: Text(
+                    name,
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    overflow: TextOverflow.clip,
+                  ),
+                )
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

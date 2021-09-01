@@ -137,10 +137,12 @@ class _HomeState extends State<Home> {
                     Groceries(
                       name: 'Pulses',
                       image: 'assets/images/pngfuel7.png',
+                      hexColor: 'F8A44C',
                     ),
                     Groceries(
                       name: 'Rice',
                       image: 'assets/images/pngfuel6.png',
+                      hexColor: '53B175',
                     ),
                   ],
                 ),
@@ -185,9 +187,10 @@ class Groceries extends StatelessWidget {
     Key? key,
     required this.name,
     required this.image,
+    required this.hexColor,
   }) : super(key: key);
 
-  final String name, image;
+  final String name, image, hexColor;
 
   @override
   Widget build(BuildContext context) {
@@ -198,7 +201,7 @@ class Groceries extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
         border: Border.all(width: 1, color: Color(0xffE2E2E2)),
-        color: Color(0xffF8A44C),
+        color: Color(int.parse('0x26$hexColor')),
       ),
       child: Stack(
         alignment: Alignment.centerLeft,
@@ -292,8 +295,9 @@ class CartItem extends StatelessWidget {
         height: 248,
         margin: EdgeInsets.only(right: 15),
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(15),
-            border: Border.all(width: 1, color: Color(0xffE2E2E2))),
+          borderRadius: BorderRadius.circular(15),
+          border: Border.all(width: 1, color: Color(0xffE2E2E2)),
+        ),
         child: Stack(
           children: [
             Column(

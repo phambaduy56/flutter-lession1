@@ -72,6 +72,7 @@ flutter:
     - assets/images/pngfuel12.png
     - assets/images/pngfuel13.png
     - assets/images/pngfuel14.png
+    - assets/images/imgeUser.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:
