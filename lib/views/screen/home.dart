@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:lession_01/views/screen/product_detail.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -288,7 +289,10 @@ class CartItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.pushNamed(context, '/SingIn');
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (_) => ProductDetail()),
+        );
       },
       child: Container(
         width: 173,
@@ -303,12 +307,14 @@ class CartItem extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Padding(
-                  padding: EdgeInsets.only(top: 15, left: 22.14),
-                  child: Image.asset(
-                    image,
-                    width: 99,
-                    height: 79,
+                Center(
+                  child: Padding(
+                    padding: EdgeInsets.only(top: 15),
+                    child: Image.asset(
+                      image,
+                      width: 99,
+                      height: 79,
+                    ),
                   ),
                 ),
                 SizedBox(height: 25),

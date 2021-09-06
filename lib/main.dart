@@ -9,6 +9,7 @@ import 'package:lession_01/views/SingIn/Verification_page.dart';
 import 'package:lession_01/views/SingIn/location_page.dart';
 import 'package:lession_01/views/navbar/nav.dart';
 import 'package:lession_01/views/onbording_page.dart';
+import 'package:lession_01/views/screen/product_detail.dart';
 import 'package:lession_01/views/splash_page.dart';
 
 void main() {

@@ -199,7 +199,7 @@ class SubmitButton extends StatelessWidget {
           SizedBox(width: 100),
           Container(
             child: Text(
-              'Log Out',
+              'Log  Out',
               style: TextStyle(fontSize: 18, color: Color(0xff53B175)),
             ),
           ),

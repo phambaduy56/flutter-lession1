@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import 'explore_detail.dart';
+
 class Explore extends StatefulWidget {
   const Explore({Key? key}) : super(key: key);
 
@@ -130,7 +132,10 @@ class ItemGritview extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        print("hello");
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (_) => ExploreDetail()),
+        );
       },
       child: Container(
         decoration: BoxDecoration(
@@ -152,15 +157,20 @@ class ItemGritview extends StatelessWidget {
                     height: 74,
                   ),
                 ),
-                Flexible(
-                  child: Text(
-                    name,
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
-                    ),
-                    overflow: TextOverflow.clip,
+                SizedBox(height: 27),
+                RichText(
+                  textAlign: TextAlign.center,
+                  text: TextSpan(
+                    children: [
+                      TextSpan(
+                        text: name,
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
                   ),
                 )
               ],
