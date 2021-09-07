@@ -77,35 +77,35 @@ class _AccountState extends State<Account> {
                 color: Colors.black,
               ),
               AccountItem(
-                icon: FontAwesomeIcons.shoppingBag,
+                image: 'assets/images/Orders_icon.png',
                 name: "Orders",
               ),
               AccountItem(
-                icon: FontAwesomeIcons.addressCard,
+                image: 'assets/images/My_Details_icon.png',
                 name: "My Details",
               ),
               AccountItem(
-                icon: FontAwesomeIcons.mapMarkerAlt,
+                image: 'assets/images/Delicery_address.png',
                 name: "Delivery Address",
               ),
               AccountItem(
-                icon: FontAwesomeIcons.moneyCheck,
+                image: 'assets/images/Vector_icon.png',
                 name: "Payment Methods",
               ),
               AccountItem(
-                icon: FontAwesomeIcons.tag,
+                image: 'assets/images/Promo_Cord_icon.png',
                 name: "Promo Cord",
               ),
               AccountItem(
-                icon: FontAwesomeIcons.bell,
+                image: 'assets/images/Bell_icon.png',
                 name: "Notifecations",
               ),
               AccountItem(
-                icon: FontAwesomeIcons.questionCircle,
+                image: 'assets/images/help_icon.png',
                 name: "Help",
               ),
               AccountItem(
-                icon: FontAwesomeIcons.exclamationCircle,
+                image: 'assets/images/about_icon.png',
                 name: "About",
               ),
               SizedBox(height: 10),
@@ -128,12 +128,10 @@ class _AccountState extends State<Account> {
 class AccountItem extends StatelessWidget {
   const AccountItem({
     Key? key,
-    required this.icon,
     required this.name,
+    required this.image,
   }) : super(key: key);
-
-  final IconData icon;
-  final String name;
+  final String name, image;
 
   @override
   Widget build(BuildContext context) {
@@ -151,7 +149,7 @@ class AccountItem extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(icon),
+                    Image.asset('$image'),
                     SizedBox(width: 20),
                     Text(
                       name,
@@ -192,10 +190,7 @@ class SubmitButton extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           SizedBox(width: 25),
-          Icon(
-            FontAwesomeIcons.signInAlt,
-            color: Color(0xff53B175),
-          ),
+          Image.asset('assets/images/Group_6892.png'),
           SizedBox(width: 100),
           Container(
             child: Text(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:lession_01/views/screen/fliters.dart';
 
 class ExploreDetail extends StatefulWidget {
   const ExploreDetail({Key? key}) : super(key: key);
@@ -35,7 +36,8 @@ class _ExploreDetailState extends State<ExploreDetail> {
         actions: [
           IconButton(
             onPressed: () {
-              print('hello');
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (_) => Filters()));
             },
             icon: Image.asset('assets/images/Group6839.png'),
           )

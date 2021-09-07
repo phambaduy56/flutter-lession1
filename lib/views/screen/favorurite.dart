@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:lession_01/views/Dialog/dialog_error.dart';
+import '../screen/favorunite_error.dart';
 
 class Favorurite extends StatefulWidget {
   const Favorurite({Key? key}) : super(key: key);
@@ -9,6 +11,13 @@ class Favorurite extends StatefulWidget {
 }
 
 class _FavoruriteState extends State<Favorurite> {
+  void showPopup() {
+    showDialog(
+      context: context,
+      builder: (_) => PopUp(),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -91,7 +100,18 @@ class _FavoruriteState extends State<Favorurite> {
               child: SizedBox(
                 width: double.infinity,
                 height: 67,
-                child: SubmitButton(),
+                child: RaisedButton(
+                  onPressed: () {
+                    showPopup();
+                  },
+                  child: Text(
+                    'Add All To Cart',
+                    style: TextStyle(fontSize: 18, color: Colors.white),
+                  ),
+                  color: Color(0xff53B175),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(23))),
+                ),
               ),
             ),
           ],
@@ -187,29 +207,5 @@ class ItemCart extends StatelessWidget {
         ],
       ),
     );
-  }
-}
-
-class SubmitButton extends StatelessWidget {
-  const SubmitButton({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return RaisedButton(
-      onPressed: () {
-        onChangeLogin(context);
-      },
-      child: Text(
-        'Add All To Cart',
-        style: TextStyle(fontSize: 18, color: Colors.white),
-      ),
-      color: Color(0xff53B175),
-      shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(23))),
-    );
-  }
-
-  void onChangeLogin(BuildContext context) {
-    Navigator.pushNamed(context, '/NavPage');
   }
 }

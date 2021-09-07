@@ -24,6 +24,7 @@ dependencies:
   flutter:
     sdk: flutter
   font_awesome_flutter: ^8.2.0
+  grouped_buttons: ^1.0.3
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -78,6 +79,17 @@ flutter:
     - assets/images/Vector12.png
     - assets/images/Group6839.png
     - assets/images/card.png
+    - assets/images/about_icon.png
+    - assets/images/Bell_icon.png
+    - assets/images/Delicery_address.png
+    - assets/images/Group_6872.png
+    - assets/images/help_icon.png
+    - assets/images/image_13.png
+    - assets/images/My_Details_icon.png
+    - assets/images/Orders_icon.png
+    - assets/images/Promo_Cord_icon.png
+    - assets/images/Vector_icon.png
+    - assets/images/Group_6892.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:
